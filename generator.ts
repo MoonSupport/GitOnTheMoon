@@ -3,38 +3,65 @@ import { writeFileStr } from 'https://deno.land/std@0.51.0/fs/mod.ts';
 const dumyObjects = [
     {
         isHost : true,
-        avartar: 'https://avatars3.githubusercontent.com/u/301201?s=88&u=f5bda667c7737f4b23f2009b5e0e5904075a84e8&v=4',
-        author: 'leobalter',
-        created: 'commented on 6 Sep 2011',
-        description: 'Thanks for sharing linux in github! The beer is free too!',
-        hasEmotion: true,
-        emotions: [
-            {
-                type: 'Hooray',
-                count :1
-            },
-            {
-                type: 'Rocket',
-                count: 2
-            }
-        ]
+        avartar: 'https://avatars2.githubusercontent.com/u/408825?s=88&u=aec617d7465dcd443093bb2e2367922786ee09dc&v=4',
+        author: 'jriecken',
+        created: 'commented on 30 May 2013',
+        description: `
+        I'm trying to programatically invoke the JSX transformer (using the version of react-tools in the npm registry) by running something like
+
+        require('react-tools').transform(someCode);
+        Which then throws this error:
+
+        Error: Cannot find module './build/React'
+        If I comment out the lines in main.js that require/use ./build/React the react-tools module loads fine and the transformer runs correctly.
+        `,
+        hasEmotion: false,
+        // emotions: [
+        //     {
+        //         type: 'Hooray',
+        //         count :1
+        //     },
+        //     {
+        //         type: 'Rocket',
+        //         count: 2
+        //     }
+        // ]
     },
     {
         isHost : false,
-        avartar: 'https://avatars3.githubusercontent.com/u/301201?s=88&u=f5bda667c7737f4b23f2009b5e0e5904075a84e8&v=4',
-        author: 'leobalter2',
-        created: 'commented on 6 Sep 2011',
-        description: 'Thanks for sharing linux in github! The beer is free too!',
+        avartar: 'https://avatars2.githubusercontent.com/u/8445?s=88&v=4',
+        author: 'zpao',
+        created: 'commented on 30 May 2013',
+        description: `
+        Bah, I changed build filenames last minute and didn't properly test the module after :( Thanks for finding this! I guess we should write some tests for the node module too, not just our phantomjs tests.
+
+        (Very) Short term, you should be able to change ./build/React to ./build/react and that will fix the problem.
+            
+        @benjamn - I guess it's time to figure out what we want to do with npm versions vs library versions. Should we just bump them both for the time being?
+        `,
+        hasEmotion: false,
+    },
+    {
+        isHost : false,
+        avartar: 'https://avatars2.githubusercontent.com/u/8445?s=88&v=4',
+        author: 'zpao',
+        created: 'commented on 30 May 2013',
+        description: `
+        Nope, that alone won't do it, we're not even packaging. I totally screwed up the node module :( Fix soon!
+
+
+        `,
         hasEmotion: false,
     },
     {
         isHost : true,
-        avartar: 'https://avatars3.githubusercontent.com/u/301201?s=88&u=f5bda667c7737f4b23f2009b5e0e5904075a84e8&v=4',
-        author: 'leobalter3',
-        created: 'commented on 6 Sep 2011',
-        description: 'Thanks for sharing linux in github! The beer is free too!',
+        avartar: 'https://avatars2.githubusercontent.com/u/408825?s=88&u=aec617d7465dcd443093bb2e2367922786ee09dc&v=4',
+        author: 'jriecken',
+        created: 'commented on 30 May 2013',
+        description: `
+        Yeah, doesn't look like there's even a build directory there. :)
+        `,
         hasEmotion: false,
-        emotions: []
     }
 ]
 
